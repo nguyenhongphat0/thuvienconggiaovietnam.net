@@ -1,8 +1,21 @@
 // Variable
 $lightbrown: #BE7338
+$darkbrown: #5A2D0C
+$nav-text-color: #FCE4BE
+$nav-border: #C48B56
+$xl: 1200px
+$lg: 992px
+$md: 768px
+$sm: 576px
 
 *
   font-family: Arial,Helvetica,sans-serif
+
+.lightbrown
+  color: $lightbrown
+
+.darkbrown
+  color: $darkbrown
 
 body
   background-image: url("/images/background.jpg")
@@ -14,9 +27,64 @@ body
 
     .header
       background-image: url("/images/bg-all.png")
+      box-shadow: 1px 1px 12px 1px #B1956D
+
+      .nav
+        padding: 0px 15px
+
+        >div
+          padding: 0px
+
+        #search-field
+          #search-icon
+            background-image: url('/images/icon-search.png')
+            width: 100%
+            position: absolute
+            height: 35px
+            top: 0px
+            background-repeat: no-repeat
+            background-size: contain
+          input
+            width: 100%
+            border-radius: 0px
+            border: 1px solid $nav-border
+            height: 35px
+            padding-left: 45px
+            padding-right: 10px
+
+        #category-field
+          width: 100%
+          border-top: 1px solid $nav-border
+          border-bottom: 1px solid $nav-border
+          height: 35px
+
+          #category-input
+            width: 75%
+            height: 33px
+            border-radius: 0px
+            border: none
+            padding: 5px
+            cursor: pointer
+          #down-arrow
+            position: absolute
+            right: 27%
+            top: 8px
+          #search-btn
+            width: 25%
+            height: 33px
+            border-radius: 0px
+            background-color: $lightbrown
+            color: $nav-text-color
+            border: none
+
 .logo
   padding: 10px 30px
-  white-space: nowrap
+
+  @media screen and (min-width: $xl)
+    white-space: nowrap
+
+  @media screen and (max-width: $xl)
+    text-align: center
 
   .site-name
     font-size: 34px
@@ -24,11 +92,10 @@ body
     vertical-align: middle
     padding: 15px
 
-    .brown
-      color: $lightbrown
-
     .dark-brown
       color: #5a2e0b
+      padding-left: 4px
+      padding-right: 4px
 
 .authen-btn
   font-weight: bold
@@ -37,8 +104,41 @@ body
   border-radius: 4px
   padding: 8px 10px 5px 10px
   display: inline-block
-  margin: 20px 10px 20px 0px
+  margin: 24px 10px 20px 0px
 
   &:hover
     color: $lightbrown
     text-decoration: none
+
+.thuvien-nav
+  list-style-type: none
+  display: flex
+  height: 35px
+  overflow: hidden
+
+  #navitems
+    margin: 0px
+    width: 100%
+
+  a.thuvien-navitem
+    background-color: $lightbrown
+    color: $nav-text-color
+    display: inline-block
+    margin-right: 1px
+    font-size: 13px
+    padding: 8px
+    cursor: pointer
+    white-space: nowrap
+    text-align: center
+
+    &:hover
+      color: $nav-text-color
+      background-color: $darkbrown
+
+  a.active
+    background-color: $darkbrown
+
+  a#home
+    padding: 3px 9px 3px 9px !important
+    i
+      color: #f7e1c2

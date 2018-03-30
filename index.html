@@ -11,44 +11,40 @@
     <div class="container content">
       <div class="header">
         <div class="row">
-          <div class="col-8 logo">
+          <div class="col-xl-8 col-12 logo">
             <img src="/images/logo.png" alt="logo">
             <span class="site-name">
-              <span class="brown">Thư Viện</span>
-              <span class="dark-brown">Công Giáo</span>
-              <span class="brown">Việt Nam</span>
+              <span class="lightbrown">Thư Viện</span><span class="dark-brown">Công Giáo</span><span class="lightbrown">Việt Nam</span>
             </span>
           </div>
-          <div class="col-4">
+          <div class="col-xl-4 col-12" style="padding-right: 20px">
             <a class="authen-btn pull-right" href="/dang-nhap"><i class="fa fa-sign-in 3x fa-lg"></i> Đăng nhập</a>
             <a class="authen-btn pull-right" href="/dang-ky"><i class="fa fa-user-plus 3x fa-lg"></i> Đăng ký</a>
           </div>
         </div>
-        <div>
-          <div class="col">
-            <div class="row">
-              <div class="col">
-                Home
-              </div>
-              <div class="row">
-                <div class="col">
-                  Thư viện
-                </div>
-                <div class="col">
-                  Tủ sách
-                </div>
-                <div class="col">
-                  Giới thiệu
-                </div>
+        <div class="row nav">
+          <div class="col-lg-4 col-12">
+            <div class="thuvien-nav">
+              <a class="thuvien-navitem active" id="home"><i class="fa fa-home fa-2x darkbrown" aria-hidden="true"></i></a>
+              <div id="navitems" class="row">
+                <a class="thuvien-navitem col">Thư viện</a>
+                <a class="thuvien-navitem col">Tủ sách</a>
+                <a class="thuvien-navitem col">Giới thiệu</a>
               </div>
             </div>
           </div>
-          <div class="col">
-            <input type="text" name="" value="" placeholder="Nhập từ khóa: tên sách, mã sách, tác giả">
+          <div class="col-lg-4 col-md-6 col-12">
+            <div id="search-field">
+              <input type="text" name="" value="" placeholder="Nhập từ khóa: tên sách, mã sách, tác giả">
+              <div id="search-icon"></div>
+            </div>
           </div>
-          <div class="col">
-            <input type="text" name="" value="Category">
-            <input type="submit" name="" value="Tìm kiếm">
+          <div class="col-lg-4 col-md-6 col-12">
+            <div id="category-field">
+              <input id="category-input" type="text" name="" value="Tìm tất cả thể loại"><!--
+           --><span id="down-arrow"><i class="fa fa-angle-down" aria-hidden="true"></i></span><!--
+           --><input id="search-btn" type="submit" name="" value="Tìm kiếm">
+            </div>
           </div>
         </div>
       </div>
