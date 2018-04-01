@@ -20,15 +20,15 @@ $sm: 576px
   color: $darkbrown
 
 body
-  background-image: url("images/background.jpg")
+  background-image: url("../images/background.jpg")
 
   .content
-    background-image: url("images/bg.png")
+    background-image: url("../images/bg.png")
     box-shadow: -1px 3px 9px 2px #A9A8A5
     max-width: 1040px
 
     .header
-      background-image: url("images/bg-all.png")
+      background-image: url("../images/bg-all.png")
       box-shadow: 1px 1px 12px 1px #B1956D
 
       .nav
@@ -58,15 +58,22 @@ body
           width: 100%
           border-top: 1px solid $nav-border
           border-bottom: 1px solid $nav-border
-          height: 35px
+          float: left
+          cursor: pointer
 
-          #category-input
+          #category-box
             width: 75%
             height: 33px
-            border-radius: 0px
-            border: none
-            padding: 5px
-            cursor: pointer
+            float: left
+            background-color: white
+            // overflow: hidden
+          .collapsed
+            overflow: hidden
+          #category-name
+            background-color: white
+            line-height: 33px
+            padding-left: 5px
+            display: block
           #down-arrow
             position: absolute
             right: 27%
@@ -79,6 +86,31 @@ body
             color: $nav-text-color
             border: none
 
+          #category-dropdown
+            background-color: white
+            width: 100%
+            border: 1px  solid #aaa
+            // border-top: 0px
+            position: relative
+            z-index: 100
+            #category-input
+              border: 1px solid #aaa
+              padding: 4px
+              width: 100%
+            #categories
+              height: 200px
+              overflow-y: scroll
+              span
+                display: block
+                width: 100%
+                padding: 6px
+                &:hover
+                  background-color: #5897fb
+              .chosen
+                background-color: #dddddd
+              .hidden
+                display: none
+
 .logo
   padding: 10px 30px
 
@@ -90,6 +122,18 @@ body
     font-weight: bold
     vertical-align: middle
     padding: 15px
+
+    @media screen and (min-width: $xl)
+      font-size: 34px
+    @media screen and (min-width: $lg) and (max-width: $xl)
+      font-size: 30px
+    @media screen and (min-width: $md) and (max-width: $lg)
+      font-size: 26px
+    @media screen and (min-width: $sm) and (max-width: $md)
+      font-size: 20px
+    @media screen and (max-width: $sm)
+      font-size: 16px
+      white-space: nowrap
 
     .dark-brown
       color: #5a2e0b
@@ -159,3 +203,32 @@ body
     span
       display: block
       margin: 5px 0px
+
+#home-slider
+  .swiper-slide
+    img
+      width: 100%
+  .swiper-button-next,
+  .swiper-button-prev
+    background-image: none
+    display: none
+    .crop-picture
+      overflow: hidden
+      width: 30px
+      height: 30px
+  &:hover
+    .swiper-button-next,
+    .swiper-button-prev
+      display: block
+
+  .swiper-pagination-bullet
+    background-color: black
+    width: 10px
+    height: 10px
+    cursor: pointer
+    opacity: 100
+    margin: 15px
+    &:hover
+      border: 3px solid #CDCDCD
+  .swiper-pagination-bullet-active
+    background-color: white
