@@ -1,3 +1,31 @@
+function createController(id) {
+  var slides = $(id).find('.book-picture')
+  slides.each((i, e) => {
+    var img = e.cloneNode(false)
+    img.className = 'swiper-slide hover-preview'
+    $(id + '-controller').children('.swiper-wrapper').append(img)
+  })
+}
+
+function registerSliderForBooksSection(id) {
+  createController(id)
+  var slider = new Swiper(id)
+  var sliderController = new Swiper(id + '-controller', {
+    slidesPerView: 'auto',
+    spaceBetween: 18,
+    slidesOffsetBefore: 25,
+    slidesOffsetAfter: 25,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    controller: {
+      control: slider
+    }
+  })
+  slider.controller.control = sliderController
+}
+
 // Home slider
 var homeSlider = new Swiper('#home-slider', {
   loop: true,
