@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>THƯ VIỆN CÔNG GIÁO - Site</title>
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/css/swiper.min.css">
     <link rel="stylesheet" href="../css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/style.min.css">
   </head>
@@ -69,9 +70,92 @@
         </div>
       </div>
 
-
-      <!-- PAGE CONTENT HERE -->
-
+      <div class="row" style="padding: 0px 15px">
+        <div class="col-md-8 col-12" style="padding: 0px">
+          <div class="swiper-container" id="home-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="images/075633_icon.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="images/063520_icon.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="images/064834_icon.jpg" alt="">
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next">
+              <div class="crop-picture">
+                <img src="images/navigation.png" alt="" style="position: relative;top: -30px;left: -70px;">
+              </div>
+            </div>
+            <div class="swiper-button-prev">
+              <div class="crop-picture">
+                <img src="images/navigation.png" alt="" style="position: relative;top: -30px;left: -10px;">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-12 thuvien-door">
+          <div class="dropdown" id="thuvien-main-dropdown" style="position: static">
+            <button class="thuvien-button" id="thuvien-main-dropdown-button">
+              <span class="extra">Nhấn</span>
+              <span>vào đây để vào</span>
+              <span class="extra">Thư viện</span>
+            </button>
+            <div class="dropdown-menu" id="thuvien-main-dropdown-menu">
+              <div class="dropleft">
+                <span class="dropdown-item hasmore" data-toggle="dropdown" onmouseover="this.click()">
+                  Tổng quát
+                </span>
+                <div class="dropdown-menu">
+                  <div class="dropleft">
+                    <span class="dropdown-item hasmore showmore">
+                      Thư mục học
+                    </span>
+                    <div class="dropdown-menu">
+                      <span class="dropdown-item">Mục lục sắp theo tuổi tác</span>
+                      <span class="dropdown-item">Thư mục sắp theo loại</span>
+                      <span class="dropdown-item">Blabla</span>
+                    </div>
+                  </div>
+                  <div class="dropleft">
+                    <span class="dropdown-item hasmore showmore">
+                      Thư viện và tin học
+                    </span>
+                    <div class="dropdown-menu">
+                      <span class="dropdown-item">Blabla</span>
+                      <span class="dropdown-item">Haiz</span>
+                      <span class="dropdown-item">Blabla</span>
+                    </div>
+                  </div>
+                  <span class="dropdown-item hasmore">Thư viện và tin học</span>
+                  <span class="dropdown-item hasmore">...</span>
+                </div>
+              </div>
+              <div class="dropleft">
+                <span class="dropdown-item hasmore" data-toggle="dropdown" onmouseover="this.click()">
+                  Triết học và tâm lí học
+                </span>
+                <div class="dropdown-menu">
+                  <span class="dropdown-item">A</span>
+                  <span class="dropdown-item">B</span>
+                  <span class="dropdown-item">C</span>
+                </div>
+              </div>
+              <span class="dropdown-item hasmore">Tôn giáo</span>
+              <span class="dropdown-item hasmore">Khoa học xã hội</span>
+              <span class="dropdown-item hasmore">Ngôn ngữ</span>
+              <span class="dropdown-item hasmore">Khoa học tự nhiên</span>
+              <span class="dropdown-item hasmore">Khoa học ứng dụng</span>
+              <span class="dropdown-item hasmore">Nghệ thuật và Mỹ thuật</span>
+              <span class="dropdown-item hasmore">Văn học và Tu Từ học</span>
+              <span class="dropdown-item hasmore">Địa lý và Lịch sử</span>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div class="footer">
         <div class="row">
@@ -115,8 +199,10 @@
         </div>
       </div>
     </div>
-    <script src="../js/jquery.min.js" charset="utf-8"></script>
-    <script src="../js/bootstrap.min.js" charset="utf-8"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/js/swiper.min.js"></script>
     <script src="../js/vietnamese.js" charset="utf-8"></script>
     <script src="../js/functions.js" charset="utf-8"></script>
   </body>
