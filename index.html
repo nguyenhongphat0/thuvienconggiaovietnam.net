@@ -157,6 +157,53 @@
         </div>
       </div>
 
+      <div class="book-section">
+        <div class="row">
+          <div class="col-md-9 col-12 section-title">
+            <h4>Sách mới đưa vào Thư viện</h4>
+            <em>(Có 50 quyển sách)</em>
+          </div>
+          <div class="col-md-3 col-12 text-right view-all">
+            <a href="#">Xem hết</a>
+            <img src="images/3_arrow.png" alt="">
+          </div>
+
+        </div>
+        <div class="shadow-line"></div>
+        <div class="row">
+          <div class="col-12 col-md-4" style="padding-right: 0px">
+            <div class="a-book">
+              <div class="book-picture">
+                <img src="images/books/003002_Sach_Quan_Che.gif" alt="">
+              </div>
+              <div class="book-info">
+                <a href="#" class="book-title">Sách Quan Chế</a>
+                <span class="book-author">Paulus Huỳnh Tịnh Của</span>
+                <hr>
+                <span class="book-description">Sách Quan Chế được in ở Saigon năm 1888, và có ghi rõ Bản in Nhà Nước. Sách dày 95 trang và được chia làm 2 Phần, và để có ý niệm về sách này, xin hãy cùng tôi đọc mấy dòng</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-8">
+            <div class="books-slide">
+              <div class="swiper-container" id="new-book-slider">
+                <div class="swiper-wrapper">
+                  <img src="images/books/003001_Dai_Nam_Quoc_Am_Tu_Vi.jpg" class="swiper-slide" alt="">
+                  <img src="images/books/003002_Sach_Quan_Che.gif" class="swiper-slide" alt="">
+                  <img src="images/books/027001_Au_Hoc_Quinh_Lam.jpg" class="swiper-slide" alt="">
+                  <img src="images/books/027002_NHO_GIAO_Quyen_Thuong.jpg" class="swiper-slide" alt="">
+                  <img src="images/books/027004_Lao_Tu_Dao_Duc_Kinh.jpg" class="swiper-slide" alt="">
+                  <img src="images/books/086001_Buoc_Chan_Nguoi_Giao_Chi___Dynh_Bang_Tho_1967.jpg" class="swiper-slide" alt="">
+                  <img src="images/books/110001_DIEN_NGU_THAN_HOC_THANH_KINH_I.jpg" class="swiper-slide" alt="">
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="footer">
         <div class="row">
           <div class="col-12 col-md-4">
@@ -205,5 +252,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/js/swiper.min.js"></script>
     <script src="../js/vietnamese.js" charset="utf-8"></script>
     <script src="../js/functions.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      var newBookSlider = new Swiper('#new-book-slider', {
+        slidesPerView: 'auto',
+        spaceBetween: 18,
+        slidesOffsetBefore: 20,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        }
+      })
+    </script>
   </body>
 </html>
