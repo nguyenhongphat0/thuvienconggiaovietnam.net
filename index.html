@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>THƯ VIỆN CÔNG GIÁO - Site</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/css/swiper.min.css">
@@ -975,7 +976,6 @@
         preview.css('left', e.clientX + 40)
         preview.css('top', e.clientY + 20)
         preview.attr('src', $(this).attr('src'))
-        console.log(preview);
       })
       $('.hover-preview').on('mouseout', function () {
         $('#book-picture-preview').css('opacity', '0')
