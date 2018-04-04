@@ -392,7 +392,38 @@ body
 
 body
   .library-content
+    display: flex
+    #side-menu-toggler
+      display: none
+      @media screen and (max-width: $md)
+        display: block
+        position: fixed
+        top: 50%
+        left: 0px
+        transform: translate(-50%, -50%)
+        z-index: 900
+        background-color: $libary-sideitem-background
+        border-radius: 100%
+        border-right: 1px solid $lightbrown
+        cursor: pointer
+        transition-duration: 1s
+        img
+          width: 50px
+          position: relative
+          left: 11px
+          transition-duration: 0.2s
     .side-menu
+      @media screen and (max-width: $md)
+        position: fixed
+        top: 0px
+        left: -225px
+        background-color: $libary-sideitem-background
+        height: 100%
+        overflow: scroll
+        z-index: 1000
+        padding-left: 15px
+        transition-duration: 1s
+      float: left
       width: 225px
       padding: 15px
       padding-left: 0px
@@ -412,6 +443,7 @@ body
         margin-top: -8px
       .menu
         padding-left: 0px
+        z-index: 1200
         .menu-item
           list-style-type: none
           max-height: 36px
@@ -451,3 +483,6 @@ body
         .leaf
           font-weight: normal !important
           font-style: italic
+
+    .right-content
+      width: 100%
