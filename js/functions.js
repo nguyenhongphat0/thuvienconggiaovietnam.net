@@ -14,7 +14,7 @@ function registerSliderForBooksSection(id) {
     slidesPerView: 'auto',
     spaceBetween: 18,
     slidesOffsetBefore: 25,
-    slidesOffsetAfter: 25,
+    slidesOffsetAfter: 1000,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
