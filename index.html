@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>THƯ VIỆN CÔNG GIÁO - Site</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/css/swiper.min.css">
@@ -956,7 +956,6 @@
           </div>
         </div>
       </div>
-      <img src="" alt="" id="book-picture-preview">
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -965,21 +964,38 @@
     <script src="./js/vietnamese.js" charset="utf-8"></script>
     <script src="./js/functions.js" charset="utf-8"></script>
     <script type="text/javascript">
+      // Home slider
+      var homeSlider = new Swiper('#home-slider', {
+        loop: true,
+        autoplay: {
+          delay: 5000
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          types: 'bullets',
+          clickable: true
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        }
+      })
+
+      // Click here to go to library button
+      $('#thuvien-main-dropdown-button').on('mouseover', function () {
+        $('#thuvien-main-dropdown-menu').addClass('show')
+      })
+      $(window).on('click', function (e) {
+        if (e.target.id != 'thuvien-main-dropdown-button') {
+          $('#thuvien-main-dropdown-menu').removeClass('show')
+        }
+      })
+
+      // Books sections slider
       registerSliderForBooksSection('#new-books-slider')
       registerSliderForBooksSection('#up-comming-books-slider')
       registerSliderForBooksSection('#good-books-slider')
       registerSliderForBooksSection('#refrences-books-slider')
-
-      $('.hover-preview').on('mousemove', function (e) {
-        preview = $('#book-picture-preview')
-        preview.css('opacity', '1')
-        preview.css('left', e.clientX + 40)
-        preview.css('top', e.clientY + 20)
-        preview.attr('src', $(this).attr('src'))
-      })
-      $('.hover-preview').on('mouseout', function () {
-        $('#book-picture-preview').css('opacity', '0')
-      })
     </script>
   </body>
 </html>

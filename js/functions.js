@@ -1,3 +1,6 @@
+// Create slider that show alls book from the detail slider
+// registerSliderForBooksSection() will call this function
+// DO NOT call this function manually
 function createController(id) {
   var slides = $(id).find('.book-picture')
   slides.each((i, e) => {
@@ -6,7 +9,9 @@ function createController(id) {
     $(id + '-controller').children('.swiper-wrapper').append(img)
   })
 }
-
+// Pass a swiper container id to this function to make it work
+// Controller's id must have this pattern: "id-controller"
+// Where "id" is the passed parameter
 function registerSliderForBooksSection(id) {
   createController(id)
   var slider = new Swiper(id)
@@ -25,23 +30,6 @@ function registerSliderForBooksSection(id) {
   })
   slider.controller.control = sliderController
 }
-
-// Home slider
-var homeSlider = new Swiper('#home-slider', {
-  loop: true,
-  autoplay: {
-    delay: 5000
-  },
-  pagination: {
-    el: '.swiper-pagination',
-    types: 'bullets',
-    clickable: true
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev'
-  }
-})
 
 // Category field
 $('#category-name').on('click', function () {
@@ -73,11 +61,18 @@ categories.each(function () {
   })
 })
 
-$('#thuvien-main-dropdown-button').on('mouseover', function () {
-  $('#thuvien-main-dropdown-menu').addClass('show')
-})
-$(window).on('click', function (e) {
-  if (e.target.id != 'thuvien-main-dropdown-button') {
-    $('#thuvien-main-dropdown-menu').removeClass('show')
-  }
+// Hover to preview books
+$(window).ready(() => {
+  preview = $('<img id="book-picture-preview">')
+  $('body').append(preview)
+  $('.hover-preview').on('mousemove', function (e) {
+    // preview = $('#book-picture-preview')
+    preview.css('opacity', '1')
+    preview.css('left', e.clientX + 40)
+    preview.css('top', e.clientY + 20)
+    preview.attr('src', $(this).attr('src'))
+  })
+  $('.hover-preview').on('mouseout', function () {
+    $('#book-picture-preview').css('opacity', '0')
+  })
 })
