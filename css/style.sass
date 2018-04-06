@@ -419,12 +419,13 @@ body
         left: -225px
         background-color: $libary-sideitem-background
         height: 100%
-        overflow: scroll
+        overflow-y: scroll
         z-index: 1000
         padding-left: 15px
         transition-duration: 1s
       float: left
       width: 225px
+      flex-shrink: 0
       padding: 15px
       padding-left: 0px
       border-right: 1px solid $lightbrown
@@ -462,7 +463,6 @@ body
             margin: 2px 0px
             cursor: pointer
             display: inline-block
-            white-space: nowrap
             &:hover
               text-decoration: none
               background-color: $lightbrown
@@ -470,8 +470,6 @@ body
           i.fa
             color: $darkbrown
             float: right
-            position: relative
-            top: -15px
         .submenu
           padding: 0px
           .menu-item
