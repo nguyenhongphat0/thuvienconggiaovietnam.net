@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THƯ VIỆN CÔNG GIÁO - Site</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/css/swiper.min.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.min.css">
+  </head>
+  <body>
+    <div class="container content">
+      <div class="header">
+        <div class="row">
+          <div class="col-lg-8 col-12 logo text-center text-lg-left">
+            <img src="images/logo.png" alt="logo">
+            <span class="site-name">
+              <span class="lightbrown">Thư Viện</span><span class="dark-brown">Công Giáo</span><span class="lightbrown">Việt Nam</span>
+            </span>
+          </div>
+          <div class="col-lg-4 col-12 text-center text-lg-right" style="padding-right: 20px">
+            <a class="authen-btn" href="/dang-ky"><i class="fa fa-user-plus 3x fa-lg"></i> Đăng ký</a>
+            <a class="authen-btn" href="/dang-nhap"><i class="fa fa-sign-in 3x fa-lg"></i> Đăng nhập</a>
+          </div>
+        </div>
+        <div class="row nav">
+          <div class="col-lg-4 col-12">
+            <div class="thuvien-nav">
+              <a href="/" class="thuvien-navitem" id="home"><i class="fa fa-home fa-2x darkbrown" aria-hidden="true"></i></a>
+              <div id="navitems" class="row">
+                <a href="thuvien.html" class="thuvien-navitem col">Thư viện</a>
+                <a href="tusach.html" class="thuvien-navitem col">Tủ sách</a>
+                <a href="thuvien.html" class="thuvien-navitem col active">Giới thiệu</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-12">
+            <div id="search-field">
+              <input type="text" name="" value="" placeholder="Nhập từ khóa: tên sách, mã sách, tác giả">
+              <div id="search-icon"></div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-12">
+            <div id="category-field">
+              <div id="category-box" class="collapsed">
+                <span id="category-name">Tìm tất cả thể loại</span>
+                <span id="down-arrow"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                <div id="category-dropdown">
+                  <div style="padding: 4px">
+                    <input id="category-input" type="text" name="" value="">
+                  </div>
+                  <div id="categories">
+                    <span class="chosen">Tìm tất cả thể loại</span>
+                    <span>Tổng quát</span>
+                    <span>Triết học và tâm lí học</span>
+                    <span>Tôn giáo</span>
+                    <span>Khoa học xã hội</span>
+                    <span>Ngôn ngữ</span>
+                    <span>Khoa học tự nhiên</span>
+                    <span>Khoa học ứng dụng</span>
+                    <span>Nghệ thuật và Mỹ thuật</span>
+                    <span>Văn học và Tu Từ học</span>
+                    <span>Địa lý và Lịch sử</span>
+                  </div>
+                </div>
+              </div>
+              <input id="search-btn" type="submit" name="" value="Tìm kiếm">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="gioithieu">
+        <div class="tab-head text-center">
+          <span class="tab-name active" onclick="showTab(this)" data-tab="info">Giới thiệu</span>
+          <span class="tab-name" onclick="showTab(this)" data-tab="sponsor">Danh sách nhà tài trợ</span>
+        </div>
+        <div class="shadow-line" style="margin: 0px"></div>
+        <div class="tab-content">
+          <div id="tab-info">
+            Kính gửi: Quý Đức Hồng y, Quý Đức cha<br>
+            Quý linh mục, tu sĩ<br>
+            Anh chị em tín hữu Công giáo<br>
+            Kính thưa Quý Hồng y, Đức cha và anh chị em thân mến,<br>
+            Hiện nay trong lĩnh vực thư viện điện tử, chúng ta đã thấy có nhiều thư viện của các tôn giáo khác nhưng chưa có một thư viện nào của Công giáo. Cách đây một vài năm chúng ta thấy có thư viện Dũng Lạc, nhưng sau khi người phụ trách là Lm. Trần Cao Tường và Lm. Giuse Phạm Văn Tuệ ở New Orleans, Texas, Hoa Kỳ, qua đời; thư viện này cũng không còn nữa.<br>
+            Vì thế, để giúp cho người Công giáo Việt Nam có thể tìm đọc, sử dụng các sách của tiền nhân đã viết trong quá khứ, cũng như để lưu trữ chúng cho thế hệ mai sau, chúng tôi mong muốn xây dựng một thư viện điện tử Công giáo với mục đích là để cho mọi người, không phân biệt tôn giáo, đều có thể sử dụng.<br>
+            Việc này do một nhóm anh em thiện chí có sáng kiến thực hiện với Đức Giám mục Micae Hoàng Đức Oanh làm trưởng nhóm và Lm. Antôn Nguyễn Ngọc Sơn được tập thể giao nhiệm vụ làm chủ nhiệm thư viện này trong giai đoạn khởi đầu. Các anh em sau đây sẽ cùng chia nhau các công tác như: thu thập, chọn lọc, phân loại sách vở tài liệu, giao tiếp và kết nối với độc giả, phân tích và xử lý dữ liệu, quản trị mạng, tìm kiếm nguồn lực:<br>
+            - Gm. Micae Hoàng Đức Oanh<br>
+            - Lm. Giuse Phạm Bá Lãm<br>
+            - Lm. Gioan Phêrô Võ Tá Khánh<br>
+            - Lm. Antôn Nguyễn Ngọc Sơn<br>
+            - Anh Tôma Nguyễn Trí Dũng<br>
+            - Anh Giêrônimô Nguyễn Văn Nội<br>
+            - Anh Giuse Nguyễn Trọng Đa<br>
+            - Anh Philipphê Nguyễn Ngọc Phượng<br>
+            - Anh Giuse Phạm Văn Tại<br>
+            - Anh Gioan Baotixita Lê Hải Nam<br>
+            - Anh Gioan Baotixita Lưu Văn Lộc<br>
+            - Anh Giuse Trần Quý Hiệp<br>
+            - Anh Giuse Nguyễn Đức Khang<br>
+            - Anh Phêrô Lê Thái Dương<br>
+            Chúng tôi rất mong nhận được sự cộng tác và đóng góp cho thư viện này của tất cả mọi người đang thiết tha với kho tàng văn hoá Công giáo Việt Nam, của cá nhân hay tập thể, của các dòng tu, các tổ chức và cộng đồng. Việc đóng góp của quý vị sẽ là những viên gạch xây dựng thư viện này cho mọi người.<br>
+            Quý vị có thể gửi cho chúng tôi những tập tin (files) của sách báo, hình ảnh, tài liệu có sẵn hoặc có thể gửi trực tiếp sách báo đó cho chúng tôi để chúng tôi chuyển thành các tập tin dữ liệu thích hợp đưa vào thư viện này. Các tập tin này sẽ được lưu trữ trong kho dữ liệu<br>
+            chung và được giới thiệu trên trang web để dễ dàng cho việc truy cập. Việc truy cập này hoàn toàn miễn phí vì Chúa là nguồn của sự khôn ngoan và Ngài cho không chúng ta tất cả những ơn lành nên chúng tôi ước mong các tác giả cũng quảng đại chia sẻ cho độc giả trong tinh thần đó.<br>
+            Chúng tôi cũng rất mong nhận được tất cả những đóng góp ý kiến của quý vị về việc xây dựng, tổ chức, quản lý, sử dụng dữ liệu của thư viện này. Mọi liên hệ, đóng góp xin gửi về địa chỉ: thuviencgvn@gmail.com hoặc Lm. Giuse Phạm Bá Lãm, Nhà thờ Hoà Hưng, 104 Tô Hiến Thành, P.5, Q.10, TP.HCM, Việt Nam.<br>
+            Nhìn về tương lai với niềm hy vọng, chúng tôi xin hết lòng cám ơn Quý Hồng y, Quý Đức cha, anh em linh mục, tu sĩ nam nữ, anh chị em tín hữu và mọi người. Xin tất cả cầu nguyện cho công việc này được hoàn thành tốt đẹp theo thánh ý Chúa.<br>
+            Kính chúc tất cả quý vị luôn an lành, tràn đầy niềm vui và ân sủng của Chúa Phục Sinh.<br>
+            Kính thư<br>
+            TM. Nhóm Thực hiện<br>
+            Gm. Micae Hoàng Đức Oanh<br>
+          </div>
+          <div id="tab-sponsor" class="hidden">
+              Gm. Micae Hoàng Đức Oanh<br>
+              - Lm. Giuse Phạm Bá Lãm<br>
+              - Lm. Gioan Phêrô Võ Tá Khánh<br>
+              - Lm. Antôn Nguyễn Ngọc Sơn<br>
+              - Anh Tôma Nguyễn Trí Dũng<br>
+              - Anh Giêrônimô Nguyễn Văn Nội<br>
+              - Anh Giuse Nguyễn Trọng Đa<br>
+              - Anh Philipphê Nguyễn Ngọc Phượng<br>
+              - Anh Giuse Phạm Văn Tại<br>
+              - Anh Gioan Baotixita Lê Hải Nam<br>
+              - Anh Gioan Baotixita Lưu Văn Lộc<br>
+              - Anh Giuse Trần Quý Hiệp<br>
+              - Anh Giuse Nguyễn Đức Khang<br>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="row">
+          <div class="col-12 col-md-4">
+            <h4>Thông tin</h4>
+            <span>
+              <i class="fa fa-lg fa-file-text-o"></i>
+              Điều khoản sử dụng
+            </span>
+            <span>
+              <i class="fa fa-lg fa-envelope"></i>
+              Liên hệ
+            </span>
+          </div>
+          <div class="col-12 col-md-4">
+            <h4>Phần mềm đọc sách</h4>
+            <span>
+              <i class="fa fa-lg fa-laptop"></i>
+              Ứng dụng cho PC
+            </span>
+            <span>
+              <i class="fa fa-lg fa-apple"></i>
+              Ứng dụng cho iOS
+            </span>
+            <span>
+              <i class="fa fa-lg fa-android"></i>
+              Ứng dụng cho Android
+            </span>
+          </div>
+          <div class="col-12 col-md-4">
+            <h4>Hỗ trợ</h4>
+            <span>
+              <i class="fa fa-lg fa-info-circle"></i>
+              Hướng dẫn
+            </span>
+            <span>
+              <i class="fa fa-lg fa-question-circle"></i>
+              Những câu hỏi thường gặp
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/js/swiper.min.js"></script>
+    <script src="./js/vietnamese.js" charset="utf-8"></script>
+    <script src="./js/functions.js" charset="utf-8"></script>
+    <script>
+      function showTab(tab) {
+        var s = tab.dataset.tab
+        $('.tab-head').children().each((i, e) => {
+          $(e).removeClass('active')
+        })
+        $('.tab-content').children().each((i, e) => {
+          $(e).addClass('hidden')
+        })
+        $(tab).addClass('active')
+        $('#tab-' + s).removeClass('hidden')
+      }
+    </script>
+  </body>
+</html>

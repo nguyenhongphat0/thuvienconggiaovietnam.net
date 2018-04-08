@@ -43,6 +43,7 @@ body
             top: 0px
             background-repeat: no-repeat
             background-size: contain
+            margin-left: -1px
           input
             width: 100%
             border-radius: 0px
@@ -167,6 +168,7 @@ body
     cursor: pointer
     white-space: nowrap
     text-align: center
+    text-decoration: none    
     &:hover
       color: $nav-text-color
       background-color: $darkbrown
@@ -282,6 +284,13 @@ body
             display: block
 
 body
+  .shadow-line
+    width: 100%
+    height: 10px
+    background-image: url('../images/shadow_line.png')
+    background-size: contain
+    background-repeat: no-repeat
+    margin: 8px 0px
   .book-section
     background-image: url('../images/bg_layer_1.jpg')
     margin: 15px 0px
@@ -306,13 +315,6 @@ body
         font-style: italic
         &:hover
           text-decoration: none
-    .shadow-line
-      width: 100%
-      height: 10px
-      background-image: url('../images/shadow_line.png')
-      background-size: contain
-      background-repeat: no-repeat
-      margin: 8px 0px
     .a-book
       height: 144px
       overflow: hidden
@@ -428,6 +430,7 @@ body
       flex-shrink: 0
       padding: 15px
       padding-left: 0px
+      margin-right: 15px
       border-right: 1px solid $lightbrown
       h5
         color: $darkbrown
@@ -484,3 +487,37 @@ body
 
     .right-content
       width: 100%
+      padding: 12px 0px
+      h5
+        color: $darkbrown
+
+.site-name
+  font-size: 34px
+  font-weight: bold
+  vertical-align: middle
+  padding: 15px
+
+body
+  .gioithieu
+    background-image: url('../images/bg_layer_1.jpg')
+    margin: 15px 0px
+    border-radius: 5px
+    box-shadow: 1px 1px 12px 1px #B1956D
+    padding: 15px
+    padding-top: 0px
+    .tab-head
+      .tab-name
+        border-width: 0px 1px
+        border-style: solid
+        border-color: $lightbrown
+        color: $darkbrown
+        display: inline-block
+        font-weight: bold
+        padding: 4px 8px
+        margin-left: -5px
+        cursor: pointer
+      .active
+        color: $lightbrown
+    .tab-content
+      .hidden
+        display: none
