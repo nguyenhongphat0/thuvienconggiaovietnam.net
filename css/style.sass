@@ -1,6 +1,7 @@
 // Variable
 $lightbrown: #BE7338
 $darkbrown: #5A2D0C
+$cafe: #FAE5C8
 $nav-text-color: #FCE4BE
 $nav-border: #C48B56
 $footer-background: #B88E5E
@@ -16,10 +17,10 @@ $sm: 576px
   font-family: Arial,Helvetica,sans-serif
 
 .lightbrown
-  color: $lightbrown
+  color: $lightbrown !important
 
 .darkbrown
-  color: $darkbrown
+  color: $darkbrown !important
 
 body
   background-image: url("../images/background.jpg")
@@ -132,6 +133,7 @@ body
     @media screen and (max-width: $sm)
       font-size: 16px
       white-space: nowrap
+      padding: 0px
 
     .dark-brown
       color: #5a2e0b
@@ -521,3 +523,49 @@ body
     .tab-content
       .hidden
         display: none
+
+body
+  .authen-title
+    background-image: url('../images/authen-bg-middle.png')
+    height: 36px
+    background-size: contain
+    display: inline-block
+    white-space: nowrap
+    margin-left: 10px
+    a
+      position: relative
+      font-size: 18px
+      color: $darkbrown
+      top: -10px
+      &:hover
+        text-decoration: none
+    &::before
+      content: url('../images/authen-bg-left.png')
+      margin-left: -10px
+    &::after
+      content: url('../images/authen-bg-right.png')
+      margin-right: -20px
+  hr
+    background-color: $lightbrown
+    margin-top: -4px
+    margin-bottom: 1px
+  .authen-section
+    margin: 15px 0px
+    .form-section
+      background-color: $cafe !important
+      margin: 15px 0px
+      padding: 15px
+      border-radius: 5px
+      box-shadow: 1px 1px 12px 1px #B1956D
+      a
+        text-decoration: underline
+      hr
+        background-color: $lightbrown
+      .form-submit
+        padding: 10px 15px
+        padding-bottom: 0px
+
+.btn-brown
+  background-color: $lightbrown
+  color: #FCE4BE
+  padding: 6px 15px

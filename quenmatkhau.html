@@ -6,6 +6,7 @@
     <title>THƯ VIỆN CÔNG GIÁO - Site</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/css/swiper.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.min.css">
     <link rel="stylesheet" href="./css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/style.min.css">
   </head>
@@ -71,9 +72,29 @@
         </div>
       </div>
 
-
-      <!-- PAGE CONTENT HERE -->
-
+      <div class="authen-section">
+        <div class="authen-title">
+          <a href="">Quên mật khẩu</a>
+        </div>
+        <hr>
+        <div class="container">
+          <div class="row">
+            <div class="col-0 col-md-2"></div>
+            <div class="col-12 col-md-8 form-section" style="padding: 30px">
+              <p class="lightbrown">1) Nhập địa chỉ email của bạn </p>
+              <div class="form-group">
+                <input type="email" class="form-control" placeholder="* Địa chỉ email">
+              </div>
+              <p class="lightbrown">2) Sau khi nhấn nút "Lấy mật khẩu", bạn kiểm tra email để nhận mật khẩu </p>
+              <p>* Thông tin bắt buộc nhập</p>
+              <div class="text-center">
+                <button class="btn btn-brown">Lấy mật khẩu</button>
+              </div>
+            </div>
+            <div class="col-0 col-md-2"></div>
+          </div>
+        </div>
+      </div>
 
       <div class="footer">
         <div class="row">
@@ -120,8 +141,14 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/js/swiper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
     <script src="./js/vietnamese.js" charset="utf-8"></script>
     <script src="./js/functions.js" charset="utf-8"></script>
+    <script>
+      $('#birthday').datepicker({
+        format: 'dd/mm/yyyy',
+        autoclose: true
+      })
+    </script>
   </body>
 </html>

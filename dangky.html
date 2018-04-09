@@ -6,6 +6,7 @@
     <title>THƯ VIỆN CÔNG GIÁO - Site</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/css/swiper.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.min.css">
     <link rel="stylesheet" href="./css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/style.min.css">
   </head>
@@ -71,9 +72,75 @@
         </div>
       </div>
 
-
-      <!-- PAGE CONTENT HERE -->
-
+      <div class="authen-section">
+        <div class="authen-title">
+          <a href="">Đăng ký</a>
+        </div>
+        <hr>
+        <div class="container">
+          <div class="row">
+            <div class="col-0 col-md-2"></div>
+            <div class="col-12 col-md-8 form-section darkbrown">
+              <p>
+                <span class="lightbrown">Chào mừng bạn đến với <b>Thư Viện <span class="darkbrown">Công Giáo</span> Việt Nam</b><br></span>
+                Vui lòng điền thông tin dưới đây để tạo tài khoản. Nếu bạn đã có tài khoản, <a href="dangnhap.html" class="lightbrown">Đăng nhập</a>
+              </p>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="* Tên hiển thị">
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" placeholder="* Địa chỉ email">
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" placeholder="* Mật khẩu (Tối thiểu 6 ký tự)">
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" placeholder="* Nhập lại mật khẩu">
+              </div>
+              <div class="form-group row">
+                <label for="birthday" class="col-4 col-md-2 col-form-label"><b style="white-space: nowrap;">Ngày sinh *</b></label>
+                <div class="col-8 col-md-3">
+                  <input type="text" class="form-control" id="birthday" placeholder="28/02/1983">
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-12 col-md-5">
+                  <div class="row">
+                    <div class="col-6"><b>Giới tính *</b></div>
+                    <div class="form-check col-3">
+                      <label class="form-check-label">
+                        <input name="gender" type="radio" class="form-check-input" checked="checked">
+                        <b>Nam</b>
+                      </label>
+                    </div>
+                    <div class="form-check col-3">
+                      <label class="form-check-label">
+                        <input name="gender" type="radio" class="form-check-input">
+                        <b>Nữ</b>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <div class="row form-submit">
+                <div class="col-12 col-md-9">
+                  * Thông tin bắt buộc nhập<br>
+                  <span class="lightbrown">Bằng cách nhấp vào nút Đăng ký, bạn sẽ đồng ý với các
+                    <a href="dieukhoansudung.html" class="darkbrown"> điều khoản sử dụng </a>
+                  của chúng tôi </span>
+                </div>
+                <div class="col-12 col-md-3 text-right">
+                  <div class="form-group">
+                    <button type="submit" class="btn btn-brown">Đăng ký</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-0 col-md-2"></div>
+          </div>
+        </div>
+      </div>
 
       <div class="footer">
         <div class="row">
@@ -120,8 +187,14 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/js/swiper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
     <script src="./js/vietnamese.js" charset="utf-8"></script>
     <script src="./js/functions.js" charset="utf-8"></script>
+    <script>
+      $('#birthday').datepicker({
+        format: 'dd/mm/yyyy',
+        autoclose: true
+      })
+    </script>
   </body>
 </html>
