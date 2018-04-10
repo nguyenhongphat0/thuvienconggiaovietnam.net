@@ -292,6 +292,7 @@ body
     background-image: url('../images/shadow_line.png')
     background-size: contain
     background-repeat: no-repeat
+    background-position-x: center
     margin: 8px 0px
   .book-section
     background-image: url('../images/bg_layer_1.jpg')
@@ -569,3 +570,61 @@ body
   background-color: $lightbrown
   color: #FCE4BE
   padding: 6px 15px
+
+body.book-detail-page
+  background-image: url('../images/bggg.jpg')
+  .header
+    font-size: 1.2vw
+    font-weight: bold
+    color: $lightbrown
+    height: 50px
+    @media screen and (max-width: $md)
+      font-size: 10px      
+      height: auto
+      background: url('../images/background.jpg')
+      padding-bottom: 10px
+      .detail-page-logo
+        margin-right: 5px
+      .tab-menu
+        position: relative
+        top: 10px
+        .a-tab
+          width: 40px
+          line-height: 10px !important
+          border-right: none !important
+      .add-to-shell-button
+        span
+          display: none
+    img
+      height: 35px
+    span.active
+      color: $darkbrown
+    .tab-menu
+      display: inline-block
+      .a-tab
+        padding: 0px 0.6vw
+        display: inline-block
+        height: 100%
+        line-height: 50px
+        border-right: 1px solid $lightbrown
+    .add-to-shell-dropdown
+      display: inline-block
+    .add-to-shell-button
+      cursor: pointer
+      border-radius: 3px
+      border: 1px solid $lightbrown
+      color: $darkbrown
+      background-color: transparent
+      font-weight: bold
+      padding: 8px 12px
+      display: inline-block
+      img
+        height: 17px
+    .add-to-shell-modal
+      font-weight: normal
+      .modal-header
+        background-color: #d5a16f
+        color: white
+        font-size: 16px
+      .modal-body
+        color: black
