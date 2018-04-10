@@ -526,32 +526,32 @@ body
         display: none
 
 body
-  .authen-title
-    background-image: url('../images/authen-bg-middle.png')
-    height: 36px
-    background-size: contain
-    display: inline-block
-    white-space: nowrap
-    margin-left: 10px
-    a
-      position: relative
-      font-size: 18px
-      color: $darkbrown
-      top: -10px
-      &:hover
-        text-decoration: none
-    &::before
-      content: url('../images/authen-bg-left.png')
-      margin-left: -10px
-    &::after
-      content: url('../images/authen-bg-right.png')
-      margin-right: -20px
-  hr
-    background-color: $lightbrown
-    margin-top: -4px
-    margin-bottom: 1px
   .authen-section
     margin: 15px 0px
+    .authen-title
+      background-image: url('../images/authen-bg-middle.png')
+      height: 36px
+      background-size: contain
+      display: inline-block
+      white-space: nowrap
+      margin-left: 10px
+      a
+        position: relative
+        font-size: 18px
+        color: $darkbrown
+        top: -10px
+        &:hover
+          text-decoration: none
+      &::before
+        content: url('../images/authen-bg-left.png')
+        margin-left: -10px
+      &::after
+        content: url('../images/authen-bg-right.png')
+        margin-right: -20px
+    hr
+      background-color: $lightbrown
+      margin-top: -4px
+      margin-bottom: 1px
     .form-section
       background-color: $cafe !important
       margin: 15px 0px
@@ -602,6 +602,7 @@ body.book-detail-page
     .tab-menu
       display: inline-block
       .a-tab
+        cursor: pointer
         padding: 0px 0.6vw
         display: inline-block
         height: 100%
@@ -621,10 +622,57 @@ body.book-detail-page
       img
         height: 17px
     .add-to-shell-modal
-      font-weight: normal
-      .modal-header
-        background-color: #d5a16f
-        color: white
-        font-size: 16px
-      .modal-body
-        color: black
+      display: inline-block
+      .modal
+        font-weight: normal
+        .modal-header
+          background-color: #d5a16f
+          color: white
+          font-size: 16px
+        .modal-body
+          color: black
+  .detail-content
+    max-width: 1000px
+    .tab-body.hidden
+      display: none
+    .tab-body
+      h2
+        text-transform: uppercase
+        font-size: 18px
+        color: $darkbrown
+        text-decoration: underline
+      .info-section
+        padding: 5px 15px 10px 15px
+        font-size: 14px
+        .info-name
+          color: $darkbrown
+          font-weight: bold
+          &::after
+            content: ': '
+        .info-value
+          color: $lightbrown
+      .description-section
+        padding: 5px 15px 10px 30px
+        font-size: 14px
+        .picture-col
+          padding: 0px
+          .book-picture
+            width: 100%
+            padding: 0px
+            box-shadow: 0px 3px 3px 0px #5f5f5f, 0px 3px 8px #ababab
+            &:hover
+              + .read-it
+                display: block
+          .read-it
+            background-color: #D7BD9E
+            opacity: 0.9
+            position: absolute
+            width: 100%
+            bottom: 3px
+            text-align: center
+            padding: 5px 0px
+            display: none
+            color: $darkbrown
+            font-weight: bold
+            &:hover
+              display: block

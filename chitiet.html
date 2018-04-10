@@ -13,13 +13,13 @@
   <div class="header text-center">
     <img src="images/logo.png" alt="" class="detail-page-logo">
     <div class="tab-menu">
-      <span class="a-tab">Thông tin sách</span>
-      <span class="a-tab">Đọc sách</span>
-      <span class="a-tab">Đánh giá & Bình luận</span>
-      <span class="a-tab">Sách liên quan</span>
+      <span class="a-tab" data-tab="info" onclick="showTab(this)">Thông tin sách</span>
+      <span class="a-tab" data-tab="reading" onclick="showTab(this)">Đọc sách</span>
+      <span class="a-tab" data-tab="comment" onclick="showTab(this)">Đánh giá & Bình luận</span>
+      <span class="a-tab" data-tab="relative" onclick="showTab(this)">Sách liên quan</span>
     </div>
     <!-- IF (logged-in) -->
-    <div class="dropdown add-to-shell-dropdown">
+    <div class="add-to-shell-dropdown dropdown">
       <a data-toggle="dropdown" class="add-to-shell-button dropdown-toggle">
         <img src="images/bookstore.png" alt="">
         <span>Thêm vào tủ sách (user)</span>
@@ -30,11 +30,12 @@
       </div>
     </div>
     <!-- ELSE IF (not logged-in) -->
+    <div class="add-to-shell-modal">
       <a class="add-to-shell-button" data-toggle="modal" data-target="#not-logged-in-modal">
         <img src="images/bookstore.png" alt="">
         <span>Thêm vào tủ sách (guest)</span>
       </a>
-      <div class="modal fade add-to-shell-modal" id="not-logged-in-modal">
+      <div class="modal fade" id="not-logged-in-modal">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -49,14 +50,105 @@
           </div>
         </div>
       </div>
+    </div>
     <!-- ENDIF -->
   </div>
   <div class="shadow-line" style="margin: 0px"></div>
   
-  
+  <div class="container detail-content">
+    <div class="tabs">
+      <div id="tab-info" class="tab-body">
+        <h2>Thông tin sách</h2>
+        <div class="row info-section">
+          <div class="col-12 col-sm-6 col-lg-3">
+            <span class="info-name">Tên sách</span>
+            <span class="info-value">Sách Quan Chế</span>
+            <br>
+            <span class="info-name">Tác giả</span>
+            <span class="info-value">Paulus Huỳnh Tịnh Của</span>
+            <br>
+            <span class="info-name">Người dịch</span>
+            <span class="info-value"></span>
+            <br>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <span class="info-name">Ngôn ngữ</span>
+            <span class="info-value">Việt</span>
+            <br>
+            <span class="info-name">Số trang</span>
+            <span class="info-value">9</span>
+            <br>
+            <span class="info-name">Nhà xuất bản</span>
+            <span class="info-value">Saigon</span>
+            <br>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <span class="info-name">Ngày phát hành</span>
+            <span class="info-value">01/01/1888</span>
+            <br>
+            <span class="info-name">Quyền sở hữu</span>
+            <span class="info-value"></span>
+            <br>
+            <span class="info-name">Người tặng</span>
+            <span class="info-value">Thầy Michel Nguyễn Hạnh</span>
+            <br>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <span class="info-name">Mã sách</span>
+            <span class="info-value">003002</span>
+            <br>
+            <span class="info-name">Số lượt xem</span>
+            <span class="info-value">148</span>
+            <br>
+            <span class="info-name">Số người đọc</span>
+            <span class="info-value">9</span>
+            <br>
+          </div>
+        </div>
+        <h2>Giới thiệu sách</h2>
+        <div class="row description-section">
+          <div class="col-12 col-md-6 col-xl-2 picture-col">
+            <a href="">
+              <img class="book-picture" src="images/books/003002_Sach_Quan_Che.gif" alt="">
+              <div class="read-it">
+                <img src="images/ic_book.png" alt="">
+                Đọc
+              </div>
+            </a>          
+          </div>
+          <div class="col-12 col-md-6 col-xl-10">
+            Sách Quan Chế được in ở Saigon năm 1888, và có ghi rõ Bản in Nhà Nước. Sách dày 95 trang và được chia làm 2 Phần, và để có ý niệm về sách này, xin hãy cùng tôi đọc mấy dòng do chính tác giả viết dưới đây để nói về cuốn sách của mình: “Một đời phải có thể chế trong một đời, một nước phải có thể chế trong một nước. Từ nhà nước Langsa chiếm cứ đất Nam kỳ, trong sự trí quan phân chức, tuy trong tiếng Langsa đều có nghĩa phân biệt, mà bởi quan chế bất đồng, ngôn ngữ khác xa, có dịch ra thì lấy ý thể cả, khó theo cho hết nghĩa. Bởi đó trong sự xưng hô chức tước, nhiều chỗ không nhằm, muốn để y theo tiếng Tây, thì lại không tiện cho nhiều người, cũng chẳng khỏi điều lầm lạc.
+          </div>
+        </div>
+      </div>
+      <div id="tab-reading" class="tab-body hidden">
+        Reading
+      </div>
+      <div id="tab-comment" class="tab-body hidden">
+        Comment
+      </div>
+      <div id="tab-relative" class="tab-body hidden">
+        Relative
+      </div>
+    </div>
+  </div>
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script>
+    function showTab(e) {
+      var s = e.dataset.tab
+      console.log(s);
+      $('.tab-menu').children().each((i, e) => {
+        $(e).removeClass('active')
+      })
+      $(e).addClass('active')
+      $('.tabs').children().each((i, e) => {
+        $(e).addClass('hidden')
+      })
+      $('#tab-' + s).removeClass('hidden')
+    }
+  </script>
 </body>
 </html>
