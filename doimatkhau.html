@@ -6,6 +6,7 @@
     <title>THƯ VIỆN CÔNG GIÁO - Site</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/css/swiper.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.min.css">
     <link rel="stylesheet" href="./css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/style.min.css">
   </head>
@@ -19,13 +20,29 @@
               <span class="lightbrown">Thư Viện</span><span class="dark-brown">Công Giáo</span><span class="lightbrown">Việt Nam</span>
             </span>
           </div>
-          <div class="col-lg-4 col-12 text-center text-lg-right">
-            <!-- IF USER NOT LOGGED IN -->
-            <div class="authen-btns">
-              <a class="authen-btn" href="/dang-ky"><i class="fa fa-user-plus 3x fa-lg"></i> Đăng ký</a>
-              <a class="authen-btn" href="/dang-nhap"><i class="fa fa-sign-in 3x fa-lg"></i> Đăng nhập</a>
+          <div class="col-lg-4 col-12 text-center text-lg-right" style="padding-right: 20px">
+            <div class="user-control">
+              <img class="avatar" src="images/maleicon.png" alt="avatar">
+              <div class="dropdown">
+                <button class="username dropdown-toggle" data-toggle="dropdown">
+                  nguyenhongphat0
+                </button>
+                <div class="dropdown-menu">
+                  <a href="thongtintaikhoan.html" class="dropdown-item">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    Thông tin tài khoản
+                  </a>
+                  <a href="doimatkhau.html" class="dropdown-item">
+                    <i class="fa fa-key" aria-hidden="true"></i>
+                    Đổi mật khẩu
+                  </a>
+                  <a href="" class="dropdown-item">
+                    <i class="fa fa-sign-out" aria-hidden="true"></i>
+                    Đăng xuất
+                  </a>
+                </div>
+              </div>
             </div>
-            <!-- ENDIF -->
           </div>
         </div>
         <div class="row nav">
@@ -75,9 +92,41 @@
         </div>
       </div>
 
-
-      <!-- PAGE CONTENT HERE -->
-
+      <div class="authen-section">
+        <div class="authen-title">
+          <a href="">Đổi mật khẩu</a>
+        </div>
+        <hr>
+        <div class="container">
+          <div class="row">
+            <div class="col-0 col-md-2"></div>
+            <div class="col-12 col-md-8 form-section darkbrown">
+              <p class="text-center">Vui lòng điền thông tin dưới đây để thay đổi mật khẩu</p>
+              <div class="form-group">
+                <input type="password" class="form-control" placeholder="* Mật khẩu cũ">
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" placeholder="* Mật khẩu mới">
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" placeholder="* Nhập lại mật khẩu mới">
+              </div>
+              <hr>
+              <div class="row form-submit">
+                <div class="col-12 col-md-9 lightbrown text-center text-md-left">
+                  * Thông tin bắt buộc nhập<br>
+                </div>
+                <div class="col-12 col-md-3 text-center text-md-right">
+                  <div class="form-group">
+                    <button type="submit" class="btn btn-brown">Đổi mật khẩu</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-0 col-md-2"></div>
+          </div>
+        </div>
+      </div>
 
       <div class="footer">
         <div class="row">
@@ -124,8 +173,14 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/js/swiper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
     <script src="./js/vietnamese.js" charset="utf-8"></script>
     <script src="./js/functions.js" charset="utf-8"></script>
+    <script>
+      $('#birthday').datepicker({
+        format: 'dd/mm/yyyy',
+        autoclose: true
+      })
+    </script>
   </body>
 </html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THƯ VIỆN CÔNG GIÁO - Site</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/css/swiper.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.min.css">
+  </head>
+  <body>
+    <div class="container content">
+      <div class="header">
+        <div class="row">
+          <div class="col-lg-8 col-12 logo text-center text-lg-left">
+            <img src="images/logo.png" alt="logo">
+            <span class="site-name">
+              <span class="lightbrown">Thư Viện</span><span class="dark-brown">Công Giáo</span><span class="lightbrown">Việt Nam</span>
+            </span>
+          </div>
+          <div class="col-lg-4 col-12 text-center text-lg-right" style="padding-right: 20px">
+            <div class="user-control">
+                <img class="avatar" src="images/maleicon.png" alt="avatar">
+                <div class="dropdown">
+                  <button class="username dropdown-toggle" data-toggle="dropdown">
+                    nguyenhongphat0
+                  </button>
+                  <div class="dropdown-menu">
+                    <a href="thongtintaikhoan.html" class="dropdown-item">
+                      <i class="fa fa-user" aria-hidden="true"></i>
+                      Thông tin tài khoản
+                    </a>
+                    <a href="doimatkhau.html" class="dropdown-item">
+                      <i class="fa fa-key" aria-hidden="true"></i>
+                      Đổi mật khẩu
+                    </a>
+                    <a href="" class="dropdown-item">
+                      <i class="fa fa-sign-out" aria-hidden="true"></i>
+                      Đăng xuất
+                    </a>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+        <div class="row nav">
+          <div class="col-lg-4 col-12">
+            <div class="thuvien-nav">
+              <a href="/" class="thuvien-navitem active" id="home"><i class="fa fa-home fa-2x" aria-hidden="true"></i></a>
+              <div id="navitems" class="row">
+                <a href="thuvien.html" class="thuvien-navitem col">Thư viện</a>
+                <a href="tusach.html" class="thuvien-navitem col">Tủ sách</a>
+                <a href="gioithieu.html" class="thuvien-navitem col">Giới thiệu</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-12">
+            <div id="search-field">
+              <input type="text" name="" value="" placeholder="Nhập từ khóa: tên sách, mã sách, tác giả">
+              <div id="search-icon"></div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-12">
+            <div id="category-field">
+              <div id="category-box" class="collapsed">
+                <span id="category-name">Tìm tất cả thể loại</span>
+                <span id="down-arrow"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                <div id="category-dropdown">
+                  <div style="padding: 4px">
+                    <input id="category-input" type="text" name="" value="">
+                  </div>
+                  <div id="categories">
+                    <span class="chosen">Tìm tất cả thể loại</span>
+                    <span>Tổng quát</span>
+                    <span>Triết học và tâm lí học</span>
+                    <span>Tôn giáo</span>
+                    <span>Khoa học xã hội</span>
+                    <span>Ngôn ngữ</span>
+                    <span>Khoa học tự nhiên</span>
+                    <span>Khoa học ứng dụng</span>
+                    <span>Nghệ thuật và Mỹ thuật</span>
+                    <span>Văn học và Tu Từ học</span>
+                    <span>Địa lý và Lịch sử</span>
+                  </div>
+                </div>
+              </div>
+              <input id="search-btn" type="submit" name="" value="Tìm kiếm">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="authen-section">
+        <div class="authen-title">
+          <a href="">Thông tin tài khoản</a>
+        </div>
+        <hr>
+        <div class="container">
+          <div class="row">
+            <div class="col-0 col-md-2"></div>
+            <div class="col-12 col-md-8 form-section lightbrown">
+              <div class="row">
+                <div class="col-12 col-md-4 text-center">
+                  <div class="avatar-editor">
+                    <img id="avatar-preview" src="images/maleicon.png" alt="avatar">
+                    <img id="avatar-upload-icon" src="images/ic_camera.png" onclick="$('#avatar-upload').click()">
+                    <input type="file" id="avatar-upload">
+                  </div>
+                </div>
+                <div class="col-12 col-md-8" style="margin-top: 7px">
+                  <div class="form-group row a-user-info">
+                    <div class="col-12 col-md-4 darkbrown">Tên hiển thị</div>
+                    <div class="col-12 col-md-8">
+                      <input type="text" class="form-control" placeholder="* Tên hiển thị" value="nguyenhongphat0">
+                    </div>
+                  </div>
+                  <div class="row a-user-info">
+                    <div class="col-12 col-md-4 darkbrown">Địa chỉ email</div>
+                    <div class="col-12 col-md-8">nguyenhongphat28121998@gmail.com</div>
+                  </div>
+                  <div class="row a-user-info">
+                      <div class="col-12 col-md-4 darkbrown">Mật khẩu</div>
+                      <div class="col-12 col-md-8"><a href="doimatkhau.html" class="lightbrown">Click vào đây để đổi mật khẩu</a></div>
+                    </div>
+                  <div class="form-group row a-user-info">
+                    <label for="birthday" class="col-12 col-md-4 darkbrown">Ngày sinh</label>
+                    <div class="col-12 col-md-8">
+                      <input type="text" class="form-control" id="birthday" placeholder="28/02/1983">
+                    </div>
+                  </div>
+                  <div class="form-group row a-user-info">
+                    <div class="col-5 darkbrown">Giới tính</div>
+                    <div class="form-check col-3 col-md-2">
+                      <label class="form-check-label">
+                        <input name="gender" type="radio" class="form-check-input" checked="checked" id="male-checkbox">
+                        <b>Nam</b>
+                      </label>
+                    </div>
+                    <div class="form-check col-3 col-md-2">
+                      <label class="form-check-label">
+                        <input name="gender" type="radio" class="form-check-input" id="female-checkbox">
+                        <b>Nữ</b>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr style="margin-top: 5px">
+              <div class="text-right form-submit">
+                <div class="form-group">
+                  <button type="submit" class="btn btn-brown">Cập nhật</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-0 col-md-2"></div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="footer">
+        <div class="row">
+          <div class="col-12 col-md-4">
+            <h4>Thông tin</h4>
+            <span>
+              <i class="fa fa-lg fa-file-text-o"></i>
+              Điều khoản sử dụng
+            </span>
+            <span>
+              <i class="fa fa-lg fa-envelope"></i>
+              Liên hệ
+            </span>
+          </div>
+          <div class="col-12 col-md-4">
+            <h4>Phần mềm đọc sách</h4>
+            <span>
+              <i class="fa fa-lg fa-laptop"></i>
+              Ứng dụng cho PC
+            </span>
+            <span>
+              <i class="fa fa-lg fa-apple"></i>
+              Ứng dụng cho iOS
+            </span>
+            <span>
+              <i class="fa fa-lg fa-android"></i>
+              Ứng dụng cho Android
+            </span>
+          </div>
+          <div class="col-12 col-md-4">
+            <h4>Hỗ trợ</h4>
+            <span>
+              <i class="fa fa-lg fa-info-circle"></i>
+              Hướng dẫn
+            </span>
+            <span>
+              <i class="fa fa-lg fa-question-circle"></i>
+              Những câu hỏi thường gặp
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
+    <script src="./js/vietnamese.js" charset="utf-8"></script>
+    <script src="./js/functions.js" charset="utf-8"></script>
+    <script>
+      $('#birthday').datepicker({
+        format: 'dd/mm/yyyy',
+        autoclose: true
+      })
+      fr = new FileReader()
+      fr.onload = (e) => {
+        $('#avatar-preview').attr('src', fr.result)
+      }
+      defaultAvatar = $('#avatar-preview').attr('src')
+      $('#avatar-upload').on('change', (e) => {
+        if (e.target.files[0].size > 2000000) {
+          showModal('Vui lòng upload file nhỏ hơn < 2 MB')
+          $(e.target).val('')
+          $('#avatar-preview').attr('src', defaultAvatar)
+        } else {
+          oldFile = e.target.files[0]
+          fr.readAsDataURL(oldFile)
+        }
+      })
+      $('#male-checkbox').click(() => {
+        $('#avatar-preview').attr('src', 'images/maleicon.png')
+      })
+      $('#female-checkbox').click(() => {
+        $('#avatar-preview').attr('src', 'images/femaleicon.png')
+      })
+    </script>
+  </body>
+</html>

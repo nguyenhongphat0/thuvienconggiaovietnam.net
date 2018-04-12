@@ -76,3 +76,17 @@ $(window).ready(() => {
     $('#book-picture-preview').css('opacity', '0')
   })
 })
+
+function showModal(msg) {
+  bootbox.alert({
+    title: 'THÔNG TIN',
+    message: msg,
+    buttons: {
+      ok: {
+        label: 'Đồng ý',
+        className: 'btn btn-light'
+      }
+    },
+    closeButton: false
+  })
+}

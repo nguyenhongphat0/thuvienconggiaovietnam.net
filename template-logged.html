@@ -20,12 +20,30 @@
             </span>
           </div>
           <div class="col-lg-4 col-12 text-center text-lg-right">
-            <!-- IF USER NOT LOGGED IN -->
-            <div class="authen-btns">
-              <a class="authen-btn" href="/dang-ky"><i class="fa fa-user-plus 3x fa-lg"></i> Đăng ký</a>
-              <a class="authen-btn" href="/dang-nhap"><i class="fa fa-sign-in 3x fa-lg"></i> Đăng nhập</a>
+            <!-- IF USER LOGGED IN -->
+            <div class="user-control">
+              <img class="avatar" src="images/maleicon.png" alt="avatar">
+              <div class="dropdown">
+                <button class="username dropdown-toggle" data-toggle="dropdown">
+                  nguyenhongphat0
+                </button>
+                <div class="dropdown-menu">
+                  <a href="thongtintaikhoan.html" class="dropdown-item">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    Thông tin tài khoản
+                  </a>
+                  <a href="doimatkhau.html" class="dropdown-item">
+                    <i class="fa fa-key" aria-hidden="true"></i>
+                    Đổi mật khẩu
+                  </a>
+                  <a href="" class="dropdown-item">
+                    <i class="fa fa-sign-out" aria-hidden="true"></i>
+                    Đăng xuất
+                  </a>
+                </div>
+              </div>
             </div>
-            <!-- ENDIF -->
+          <!-- ENDIF -->
           </div>
         </div>
         <div class="row nav">

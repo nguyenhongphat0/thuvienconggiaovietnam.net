@@ -44,7 +44,6 @@ body
             top: 0px
             background-repeat: no-repeat
             background-size: contain
-            margin-left: -1px
           input
             width: 100%
             border-radius: 0px
@@ -170,7 +169,9 @@ body
     cursor: pointer
     white-space: nowrap
     text-align: center
-    text-decoration: none    
+    text-decoration: none
+    &:last-child
+      margin-right: 0
     &:hover
       color: $nav-text-color
       background-color: $darkbrown
@@ -623,14 +624,6 @@ body.book-detail-page
         height: 17px
     .add-to-shell-modal
       display: inline-block
-      .modal
-        font-weight: normal
-        .modal-header
-          background-color: #d5a16f
-          color: white
-          font-size: 16px
-        .modal-body
-          color: black
   .detail-content
     max-width: 1000px
     .picture-col
@@ -716,3 +709,60 @@ body.book-detail-page
         font-weight: bold
         position: relative
         top: 5px
+
+.modal
+  font-weight: normal
+  .modal-header
+    background-color: #d5a16f
+    h4      
+      color: white
+      font-size: 16px
+      font-weight: normal
+  .modal-body
+    color: black
+
+.header
+  .user-control
+    padding: 15px 20px 10px 0px
+    .avatar
+      width: 50px
+    .dropdown
+      display: inline-block
+      .dropdown-toggle
+        background: transparent
+        color: $darkbrown
+        border: none
+        font-size: 14px
+        cursor: pointer
+        outline: none
+        padding: 5px
+        border-radius: 4px
+      .dropdown-menu
+        background-color: $darkbrown
+        .dropdown-item
+          color: #D5A16F
+          font-size: 14px
+          &:hover
+            color: white
+            background-color: $darkbrown
+    .dropdown.show
+      .dropdown-toggle
+        background-color: $lightbrown
+        color: white
+
+body
+  .authen-section
+    overflow: hidden
+    .avatar-editor
+      #avatar-preview
+        width: 150px
+      #avatar-upload-icon
+        cursor: pointer
+      #avatar-upload
+        display: none
+    .form-submit
+      width: 100%
+    .a-user-info
+      min-height: 25px
+      margin: 10px 0px
+      line-height: 25px
