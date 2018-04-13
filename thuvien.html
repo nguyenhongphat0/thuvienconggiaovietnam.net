@@ -368,10 +368,9 @@
                   </select>
                 </div>
                 <div class="col-12 col-lg-5 text-center text-lg-right">
-                  <span class="page-navigator prev">&lt;</span>
-                  <select name="page-number" class="page-number">
-                  </select>
-                  <span class="page-navigator next">&gt;</span>
+                  <span class="page-navigator prev" onclick="prevPage()">&lt;</span>
+                  <select name="page-number" class="page-number"></select>
+                  <span class="page-navigator next" onclick="nextPage()">&gt;</span>
                 </div>
               </div>
             </div>
@@ -379,7 +378,7 @@
               <div id="results" class="row">
                 <div data-title="Âu Học Quỳnh Lâm 3" data-views="100" class="a-result col-6 col-sm-4 col-md-3 col-lg-2 picture-col">
                   <div class="book-card">
-                    <a href="">
+                    <a href="chitiet.html">
                       <img class="book-picture" src="images/books/110001_DIEN_NGU_THAN_HOC_THANH_KINH_I.jpg" alt="">
                       <div class="read-it">
                         <img src="images/ic_book.png" alt="">
@@ -391,7 +390,7 @@
                 </div>
                 <div data-title="AAAAAAAAAA" data-views="17" class="a-result col-6 col-sm-4 col-md-3 col-lg-2 picture-col">
                   <div class="book-card">
-                    <a href="">
+                    <a href="chitiet.html">
                       <img class="book-picture" src="images/books/027004_Lao_Tu_Dao_Duc_Kinh.jpg" alt="">
                       <div class="read-it">
                         <img src="images/ic_book.png" alt="">
@@ -403,7 +402,7 @@
                 </div>
                 <div data-title="CCCCC" data-views="220" class="a-result col-6 col-sm-4 col-md-3 col-lg-2 picture-col">
                   <div class="book-card">
-                    <a href="">
+                    <a href="chitiet.html">
                       <img class="book-picture" src="images/books/027004_Lao_Tu_Dao_Duc_Kinh.jpg" alt="">
                       <div class="read-it">
                         <img src="images/ic_book.png" alt="">
@@ -415,7 +414,7 @@
                 </div>
                 <div data-title="CCCCCCBBBBBBBB" data-views="80" class="a-result col-6 col-sm-4 col-md-3 col-lg-2 picture-col">
                   <div class="book-card">
-                    <a href="">
+                    <a href="chitiet.html">
                       <img class="book-picture" src="images/books/027004_Lao_Tu_Dao_Duc_Kinh.jpg" alt="">
                       <div class="read-it">
                         <img src="images/ic_book.png" alt="">
@@ -427,7 +426,7 @@
                 </div>
                 <div data-title="Nhà Bác Học Nhí" data-views="94" class="a-result col-6 col-sm-4 col-md-3 col-lg-2 picture-col">
                   <div class="book-card">
-                    <a href="">
+                    <a href="chitiet.html">
                       <img class="book-picture" src="images/books/027004_Lao_Tu_Dao_Duc_Kinh.jpg" alt="">
                       <div class="read-it">
                         <img src="images/ic_book.png" alt="">
@@ -439,7 +438,7 @@
                 </div>
                 <div data-title="Lorem Ispum" data-views="100" class="a-result col-6 col-sm-4 col-md-3 col-lg-2 picture-col">
                   <div class="book-card">
-                    <a href="">
+                    <a href="chitiet.html">
                       <img class="book-picture" src="images/books/027004_Lao_Tu_Dao_Duc_Kinh.jpg" alt="">
                       <div class="read-it">
                         <img src="images/ic_book.png" alt="">
@@ -451,7 +450,7 @@
                 </div>
                 <div data-title="Well done boy" data-views="300" class="a-result col-6 col-sm-4 col-md-3 col-lg-2 picture-col">
                   <div class="book-card">
-                    <a href="">
+                    <a href="chitiet.html">
                       <img class="book-picture" src="images/books/027004_Lao_Tu_Dao_Duc_Kinh.jpg" alt="">
                       <div class="read-it">
                         <img src="images/ic_book.png" alt="">
@@ -620,6 +619,23 @@
         })
       })
       $('.page-number').change()
+
+      // Page navigator
+      function nextPage() {
+        var pageNumber = Number($('.page-number').val()) + 1
+        var options = $('.page-number option').length
+        if (pageNumber < options) {
+          $('.page-number').val(pageNumber)
+          $('.page-number').change()
+        }
+      }
+      function prevPage() {
+        var pageNumber = Number($('.page-number').val()) - 1
+        if (pageNumber >= 0) {
+          $('.page-number').val($('.page-number').val() - 1)
+          $('.page-number').change() 
+        }
+      }
     </script>
   </body>
 </html>

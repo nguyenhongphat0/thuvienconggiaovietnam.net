@@ -536,6 +536,10 @@ body
             border: 1px solid #be682f
             padding: 6px 8px
             cursor: pointer
+            -webkit-user-select: none; /* Safari 3.1+ */
+            -moz-user-select: none; /* Firefox 2+ */
+            -ms-user-select: none; /* IE 10+ */
+            user-select: none; /* Standard syntax */
           .prev
             border-radius: 10px 0px 0px 10px
           .next
@@ -699,6 +703,20 @@ body.book-detail-page
       .description-section
         padding: 5px 15px 10px 20px
         font-size: 14px
+      .book-picture
+        height: auto
+      .read-it
+        bottom: 48px
+      .download-btn
+        cursor: pointer
+        border-radius: 3px
+        border: 1px solid $lightbrown
+        color: $darkbrown
+        background-color: transparent
+        font-weight: bold
+        padding: 8px 12px
+        display: inline-block
+        margin-top: 10px
     #tab-reading
       iframe
         width: 100%
