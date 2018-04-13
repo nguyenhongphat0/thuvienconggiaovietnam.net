@@ -74,14 +74,40 @@
 
       <div class="authen-section">
         <div class="authen-title">
-          <a href="">Điều khoản sử dụng</a>
+          <a href="">Ứng dụng</a>
         </div>
         <hr>
         <div class="container-fluid">
           <div class="row">
-            <div class="col-12 book-section">
-              Chúng tôi sử dụng email của bạn để liên hệ<br>
-              Sử dụng số điện thoại để liên lạc
+            <div class="col-12 form-section">
+              <div class="collapsable-block">
+                <h4 class="block-title" onclick="toggleBlock(this)">
+                  <i class="fa fa-question-circle-o fa-2x" aria-hidden="true"></i>
+                  Ứng dụng cho PC
+                </h4>
+                <div class="block-content">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br>
+                  Ratione culpa corporis a cum quidem aliquam facilis voluptas eos sed est, inventore sit quisquam. Eligendi magnam ea dicta saepe similique fugiat!
+                </div>
+              </div>
+              <div class="collapsable-block">
+                <h4 class="block-title" onclick="toggleBlock(this)">
+                  <i class="fa fa-question-circle-o fa-2x" aria-hidden="true"></i>
+                  Ứng dụng cho IOS
+                </h4>
+                <div class="block-content">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br>
+                </div>
+              </div>
+              <div class="collapsable-block">
+                <h4 class="block-title" onclick="toggleBlock(this)">
+                  <i class="fa fa-question-circle-o fa-2x" aria-hidden="true"></i>
+                  Ứng dụng cho Android
+                </h4>
+                <div class="block-content">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste illo dignissimos optio odio voluptatem consequatur veniam eum quas rerum. Amet non aliquam quis architecto adipisci blanditiis dolorum fugit cum ullam pariatur libero corrupti, et fugiat cupiditate corporis quaerat nostrum minima veritatis voluptates eum odio! Quam laborum delectus necessitatibus doloribus magni ea voluptates ipsum et dolorum ipsa non, iure iusto ut doloremque deleniti. Praesentium temporibus omnis doloremque vitae tempora soluta, eveniet commodi. Aspernatur, harum officiis. Itaque odio doloremque id aut beatae temporibus reiciendis expedita facilis omnis, ut excepturi voluptatem libero veritatis fugiat eveniet consequuntur cupiditate doloribus veniam provident iure? Quas, voluptatibus?
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -136,10 +162,14 @@
     <script src="./js/vietnamese.js" charset="utf-8"></script>
     <script src="./js/functions.js" charset="utf-8"></script>
     <script>
-      $('#birthday').datepicker({
-        format: 'dd/mm/yyyy',
-        autoclose: true
-      })
+      function toggleBlock(e) {
+        var p = $(e).parent()
+        if (p.css('max-height') == '36px') {
+          p.css('max-height', p.children('.block-content').height() + 36)
+        } else {
+          p.css('max-height', '36px')
+        }
+      }
     </script>
   </body>
 </html>

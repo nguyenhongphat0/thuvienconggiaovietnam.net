@@ -819,3 +819,30 @@ body
       min-height: 25px
       margin: 10px 0px
       line-height: 25px
+
+body
+  .contact
+    b
+      font-size: 16px
+    img
+      max-width: 100%
+      margin: 10px 0px
+    @media screen and (min-width: $md)
+      .contact-form
+        border-left: 1px solid $lightbrown
+  .collapsable-block
+    max-height: 36px
+    overflow: hidden
+    transition-duration: 0.5s
+    .block-title
+      color: #DB9527
+      font-weight: bold
+      font-size: 14px
+      cursor: pointer
+      padding-left: 10px
+      margin-bottom: 8px
+      i.fa
+        position: relative
+        top: 4px
+    .block-content
+      padding-left: 28px
