@@ -4,9 +4,12 @@
 function createController(id) {
   var slides = $(id).find('.book-picture')
   slides.each((i, e) => {
-    var img = e.cloneNode(false)
-    img.className = 'swiper-slide hover-preview'
-    $(id + '-controller').children('.swiper-wrapper').append(img)
+    var link = $('<a href="chitiet.html"></a>')
+    link.addClass('swiper-slide')
+    var img = $(e).clone()
+    img.addClass('hover-preview')
+    link.append(img)
+    $(id + '-controller').children('.swiper-wrapper').append(link)
   })
 }
 // Pass a swiper container id to this function to make it work

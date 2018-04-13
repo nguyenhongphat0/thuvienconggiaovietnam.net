@@ -349,14 +349,131 @@
 
         <!-- RIGHT CONTENTS -->
         <div class="right-content">
-          <h5>A category</h5>
-          <div class="book-section">
-            <div class="row">
-              <div class="col-md-9 col-12 section-title">
-                <h4>Title</h4>
-                <em>(50 books)</em>
+          <div id="search-result">
+            <i>Sách nổi bật phù hợp với từ khóa "<span class="keyword">keyword</span>"</i>
+            <div class="container-fluid">
+              <div class="row filter-panel">
+                <div class="col-12 col-lg-7 text-center text-lg-left">
+                  Sắp xếp:
+                  <select name="sort-by" class="sort-by">
+                    <option value="abc" selected>Tiều đề A-Z</option>
+                    <option value="view">Lượt xem</option>
+                  </select>
+                  Hiển thị:
+                  <select name="items-per-page" class="items-per-page">
+                    <option value="2" selected>2</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                    <option value="150">150</option>
+                  </select>
+                </div>
+                <div class="col-12 col-lg-5 text-center text-lg-right">
+                  <span class="page-navigator prev">&lt;</span>
+                  <select name="page-number" class="page-number">
+                  </select>
+                  <span class="page-navigator next">&gt;</span>
+                </div>
               </div>
-              <div></div>
+            </div>
+            <div class="book-section">
+              <div id="results" class="row">
+                <div data-title="Âu Học Quỳnh Lâm 3" data-views="100" class="a-result col-6 col-sm-4 col-md-3 col-lg-2 picture-col">
+                  <div class="book-card">
+                    <a href="">
+                      <img class="book-picture" src="images/books/110001_DIEN_NGU_THAN_HOC_THANH_KINH_I.jpg" alt="">
+                      <div class="read-it">
+                        <img src="images/ic_book.png" alt="">
+                        Đọc
+                      </div>
+                    </a>
+                    <span class="book-name">Âu Học Quỳnh Lâm 3</span>
+                  </div>
+                </div>
+                <div data-title="AAAAAAAAAA" data-views="17" class="a-result col-6 col-sm-4 col-md-3 col-lg-2 picture-col">
+                  <div class="book-card">
+                    <a href="">
+                      <img class="book-picture" src="images/books/027004_Lao_Tu_Dao_Duc_Kinh.jpg" alt="">
+                      <div class="read-it">
+                        <img src="images/ic_book.png" alt="">
+                        Đọc
+                      </div>
+                    </a>
+                    <span class="book-name">AAAAAAAAAA</span>
+                  </div>
+                </div>
+                <div data-title="CCCCC" data-views="220" class="a-result col-6 col-sm-4 col-md-3 col-lg-2 picture-col">
+                  <div class="book-card">
+                    <a href="">
+                      <img class="book-picture" src="images/books/027004_Lao_Tu_Dao_Duc_Kinh.jpg" alt="">
+                      <div class="read-it">
+                        <img src="images/ic_book.png" alt="">
+                        Đọc
+                      </div>
+                    </a>
+                    <span class="book-name">CCCCC</span>
+                  </div>
+                </div>
+                <div data-title="CCCCCCBBBBBBBB" data-views="80" class="a-result col-6 col-sm-4 col-md-3 col-lg-2 picture-col">
+                  <div class="book-card">
+                    <a href="">
+                      <img class="book-picture" src="images/books/027004_Lao_Tu_Dao_Duc_Kinh.jpg" alt="">
+                      <div class="read-it">
+                        <img src="images/ic_book.png" alt="">
+                        Đọc
+                      </div>
+                    </a>
+                    <span class="book-name">CCCCCCBBBBBBBB</span>
+                  </div>
+                </div>
+                <div data-title="Nhà Bác Học Nhí" data-views="94" class="a-result col-6 col-sm-4 col-md-3 col-lg-2 picture-col">
+                  <div class="book-card">
+                    <a href="">
+                      <img class="book-picture" src="images/books/027004_Lao_Tu_Dao_Duc_Kinh.jpg" alt="">
+                      <div class="read-it">
+                        <img src="images/ic_book.png" alt="">
+                        Đọc
+                      </div>
+                    </a>
+                    <span class="book-name">Nhà Bác Học Nhí</span>
+                  </div>
+                </div>
+                <div data-title="Lorem Ispum" data-views="100" class="a-result col-6 col-sm-4 col-md-3 col-lg-2 picture-col">
+                  <div class="book-card">
+                    <a href="">
+                      <img class="book-picture" src="images/books/027004_Lao_Tu_Dao_Duc_Kinh.jpg" alt="">
+                      <div class="read-it">
+                        <img src="images/ic_book.png" alt="">
+                        Đọc
+                      </div>
+                    </a>
+                    <span class="book-name">Lorem Ispum</span>
+                  </div>
+                </div>
+                <div data-title="Well done boy" data-views="300" class="a-result col-6 col-sm-4 col-md-3 col-lg-2 picture-col">
+                  <div class="book-card">
+                    <a href="">
+                      <img class="book-picture" src="images/books/027004_Lao_Tu_Dao_Duc_Kinh.jpg" alt="">
+                      <div class="read-it">
+                        <img src="images/ic_book.png" alt="">
+                        Đọc
+                      </div>
+                    </a>
+                    <span class="book-name">Well done boy</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="category-items" class="hidden">
+            <h5>A category</h5>
+            <div class="book-section">
+              <div class="row">
+                <div class="col-md-9 col-12 section-title">
+                  <h4>Title</h4>
+                  <em>(50 books)</em>
+                </div>
+                <div></div>
+              </div>
             </div>
           </div>
         </div>
@@ -432,6 +549,7 @@
         icon.addClass('fa-plus-square')
       }
       function toggleMenu(e) {
+        // Menu expand - collapse handling
         e = e.parentElement
         if ($(e).height() == 36) {
           showMenu(e)
@@ -441,11 +559,14 @@
         } else {
           hideMenu(e)
         }
+
+        // Logic handling
+        $('#search-result').addClass('hidden')
+        $('#category-items').removeClass('hidden')
       }
       
       // Toggle sidemenu in sm viewport
       $('#side-menu-toggler').click(function () {
-        console.log(this);
         if ($(this).css('left') == '0px') {
           $(this).css('left', '225px')
           $('.side-menu').css('left', '0px')
@@ -456,6 +577,49 @@
           $(this).children('img').css('transform', 'none')
         }
       })
+
+      // Handdle sort-by filter
+      $('.sort-by').change((e) => {
+        if (e.target.value == 'abc') {
+          $('.a-result').sort((a, b) => {
+            return trimspecials(a.dataset.title) > trimspecials(b.dataset.title)
+          }).appendTo($('#results'))
+        } else {
+          $('.a-result').sort((a, b) => {
+            return b.dataset.views - a.dataset.views
+          }).appendTo($('#results'))
+        }
+        $('.page-number').change()
+      })
+      // Call it one
+      $('.sort-by').change()
+
+      // Handle items-per-page filter
+      $('.items-per-page').change((e) => {
+        var itemsPerPage = $('.items-per-page').val()
+        var itemsCount = $('.a-result').length
+        var totalPage = Math.ceil(itemsCount/itemsPerPage)
+        $('.page-number').empty()
+        for (let i = 0; i < totalPage; i++) {
+          var s = 'Trang ' + (i + 1) + ' của ' + totalPage
+          $('.page-number').append($('<option value="' + i + '">' + s + '</option>'))          
+        }
+        $('.page-number').change()
+      })
+      $('.items-per-page').change()
+
+      // Handle page-number filter
+      $('.page-number').change((e) => {
+        var pageNumer = Number(e.target.value)
+        var itemsPerPage = $('.items-per-page').val()
+        $('.a-result').each((i, res) => {
+          $(res).hide()
+          if (i >= itemsPerPage*pageNumer && i < itemsPerPage*(pageNumer + 1)) {
+            $(res).show()
+          }
+        })
+      })
+      $('.page-number').change()
     </script>
   </body>
 </html>
