@@ -638,36 +638,25 @@ body.book-detail-page
     font-weight: bold
     color: $lightbrown
     height: 50px
-    @media screen and (max-width: $md)
-      font-size: 10px      
-      height: auto
-      background: url('../images/background.jpg')
-      padding-bottom: 10px
-      .detail-page-logo
-        margin-right: 5px
-      .tab-menu
-        position: relative
-        top: 10px
-        .a-tab
-          width: 40px
-          line-height: 10px !important
-          border-right: none !important
-      .add-to-shell-button
-        span
-          display: none
+    margin-bottom: 20px
     img
       height: 35px
     span.active
       color: $darkbrown
-    .tab-menu
-      display: inline-block
-      .a-tab
-        cursor: pointer
-        padding: 0px 0.6vw
+    .shadow-line
+      margin-top: 0px
+    .desktop-navbar
+      .tab-menu
         display: inline-block
-        height: 100%
-        line-height: 50px
-        border-right: 1px solid $lightbrown
+        .a-tab
+          cursor: pointer
+          padding: 0px 0.6vw
+          display: inline-block
+          height: 100%
+          line-height: 50px
+          border-right: 1px solid $lightbrown
+    .mobile-navbar
+      display: none
     .add-to-shell-dropdown
       display: inline-block
     .add-to-shell-button
@@ -683,6 +672,47 @@ body.book-detail-page
         height: 17px
     .add-to-shell-modal
       display: inline-block
+    @media screen and (max-width: $md)
+      .shadow-line
+        display: none
+      .desktop-navbar
+        display: none
+      .mobile-navbar
+        display: block
+        position: fixed
+        z-index: 1000
+        %mobile-navbar-component
+          background-image: url('../images/background.jpg')
+        .top-menu
+          @extend %mobile-navbar-component
+          width: 100vw
+          padding: 8px 0px
+          border-bottom: 1px solid $lightbrown
+          .detail-page-logo
+          .fa.fa-bars
+            float: left
+            padding-left: 5px
+            cursor: pointer
+          .add-to-shell-modal,
+          .add-to-shell-dropdown
+            float: right
+            padding-right: 5px
+        .side-menu
+          @extend %mobile-navbar-component
+          position: fixed
+          top: 52px
+          left: -225px
+          width: 225px
+          height: 100vh
+          transition-duration: 0.5s
+          border-right: 1px solid $lightbrown
+          .a-tab
+            display: block
+            font-size: 14px
+            text-align: left
+            padding: 10px 20px
+            border-bottom: 1px solid $lightbrown
+            cursor: pointer
   .detail-content
     max-width: 1000px
     .tab-body.hidden

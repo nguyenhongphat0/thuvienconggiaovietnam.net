@@ -11,36 +11,69 @@
 </head>
 <body class="book-detail-page">
   <div class="header text-center">
-    <a href="index.html">
-      <img src="images/logo.png" alt="" class="detail-page-logo">
-    </a>
-    <div class="tab-menu">
-      <span class="a-tab" data-tab="info" onclick="showTab(this)">Thông tin sách</span>
-      <span class="a-tab" data-tab="reading" onclick="showTab(this)">Đọc sách</span>
-      <span class="a-tab" data-tab="comment" onclick="showTab(this)">Đánh giá & Bình luận</span>
-      <span class="a-tab" data-tab="relative" onclick="showTab(this)">Sách liên quan</span>
-    </div>
-    <!-- IF (logged-in) -->
-    <div class="add-to-shell-dropdown dropdown">
-      <a data-toggle="dropdown" class="add-to-shell-button dropdown-toggle">
-        <img src="images/bookstore.png" alt="">
-        <span>Thêm vào tủ sách (user)</span>
+    <div class="desktop-navbar">
+      <a href="index.html">
+        <img src="images/logo.png" alt="" class="detail-page-logo">
       </a>
-      <div class="dropdown-menu">
-        <a href="" class="dropdown-item">Sách này</a>
-        <a href="" class="dropdown-item">Nguyên bộ</a>
+      <div class="tab-menu">
+        <span class="a-tab" data-tab="info" onclick="showTab(this)">Thông tin sách</span>
+        <span class="a-tab" data-tab="reading" onclick="showTab(this)">Đọc sách</span>
+        <span class="a-tab" data-tab="comment" onclick="showTab(this)">Đánh giá & Bình luận</span>
+        <span class="a-tab" data-tab="relative" onclick="showTab(this)">Sách liên quan</span>
       </div>
-    </div>
-    <!-- ELSE IF (not logged-in) -->
-    <div class="add-to-shell-modal">
-      <a class="add-to-shell-button" onclick="showModal('Vui lòng đăng nhập để sử dụng chức năng này!')">
-        <img src="images/bookstore.png" alt="">
-        <span>Thêm vào tủ sách (guest)</span>
-      </a>
-    </div>
+      <!-- IF (logged-in) -->
+      <div class="add-to-shell-dropdown dropdown">
+        <a data-toggle="dropdown" class="add-to-shell-button dropdown-toggle">
+          <img src="images/bookstore.png" alt="">
+          <span>Thêm vào tủ sách (user)</span>
+        </a>
+        <div class="dropdown-menu">
+          <a href="" class="dropdown-item">Sách này</a>
+          <a href="" class="dropdown-item">Nguyên bộ</a>
+        </div>
+      </div>
+      <!-- ELSE IF (not logged-in) -->
+      <div class="add-to-shell-modal">
+        <a class="add-to-shell-button" onclick="showModal('Vui lòng đăng nhập để sử dụng chức năng này!')">
+          <img src="images/bookstore.png" alt="">
+          <span>Thêm vào tủ sách (guest)</span>
+        </a>
+      </div>
     <!-- ENDIF -->
   </div>
-  <div class="shadow-line" style="margin-top: 0px"></div>
+    <div class="mobile-navbar">
+      <div class="top-menu">
+        <a href="index.html">
+          <img src="images/logo.png" alt="" class="detail-page-logo">
+        </a>
+        <i class="fa fa-bars fa-5x" aria-hidden="true" id="hamburger-icon"></i>
+        <!-- IF (logged-in) -->
+        <div class="add-to-shell-dropdown dropdown">
+          <a data-toggle="dropdown" class="add-to-shell-button dropdown-toggle">
+            <img src="images/bookstore.png" alt="">
+          </a>
+          <div class="dropdown-menu">
+            <a href="" class="dropdown-item">Sách này</a>
+            <a href="" class="dropdown-item">Nguyên bộ</a>
+          </div>
+        </div>
+        <!-- ELSE IF (not logged-in) -->
+        <div class="add-to-shell-modal">
+          <a class="add-to-shell-button" onclick="showModal('Vui lòng đăng nhập để sử dụng chức năng này!')">
+            <img src="images/bookstore.png" alt="">
+          </a>
+        </div>
+        <!-- ENDIF -->
+      </div>
+      <div class="side-menu">
+        <span class="a-tab" data-tab="info" onclick="showTab(this)">Thông tin sách</span>
+        <span class="a-tab" data-tab="reading" onclick="showTab(this)">Đọc sách</span>
+        <span class="a-tab" data-tab="comment" onclick="showTab(this)">Đánh giá & Bình luận</span>
+        <span class="a-tab" data-tab="relative" onclick="showTab(this)">Sách liên quan</span>
+      </div>
+    </div>
+    <div class="shadow-line"></div>
+  </div>
   
   <div class="container detail-content">
     <div class="tabs">
@@ -202,6 +235,15 @@
       })
       $('#tab-' + s).removeClass('hidden')
     }
+
+    $('#hamburger-icon').click((e) => {
+      var menu = $('.mobile-navbar .side-menu')
+      if (menu.css('left') == '0px') {
+        menu.css('left', '-225px')        
+      } else {
+        menu.css('left', '0px')
+      }
+    })
   </script>
 </body>
 </html>
