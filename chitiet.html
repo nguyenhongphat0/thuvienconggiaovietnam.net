@@ -16,7 +16,7 @@
         <img src="images/logo.png" alt="" class="detail-page-logo">
       </a>
       <div class="tab-menu">
-        <span class="a-tab" data-tab="info" onclick="showTab(this)">Thông tin sách</span>
+        <span class="a-tab active" data-tab="info" onclick="showTab(this)">Thông tin sách</span>
         <span class="a-tab" data-tab="reading" onclick="showTab(this)">Đọc sách</span>
         <span class="a-tab" data-tab="comment" onclick="showTab(this)">Đánh giá & Bình luận</span>
         <span class="a-tab" data-tab="relative" onclick="showTab(this)">Sách liên quan</span>
@@ -66,7 +66,7 @@
         <!-- ENDIF -->
       </div>
       <div class="side-menu">
-        <span class="a-tab" data-tab="info" onclick="showTab(this)">Thông tin sách</span>
+        <span class="a-tab active" data-tab="info" onclick="showTab(this)">Thông tin sách</span>
         <span class="a-tab" data-tab="reading" onclick="showTab(this)">Đọc sách</span>
         <span class="a-tab" data-tab="comment" onclick="showTab(this)">Đánh giá & Bình luận</span>
         <span class="a-tab" data-tab="relative" onclick="showTab(this)">Sách liên quan</span>
@@ -226,13 +226,10 @@
     function showTab(e) {
       var s = e.dataset.tab
       console.log(s);
-      $('.tab-menu').children().each((i, e) => {
-        $(e).removeClass('active')
-      })
-      $(e).addClass('active')
-      $('.tabs').children().each((i, e) => {
-        $(e).addClass('hidden')
-      })
+      $('.a-tab').removeClass('active')
+      // $(e).addClass('active')
+      $('.a-tab[data-tab=' + s + ']').addClass('active')
+      $('.tabs').children().addClass('hidden')
       $('#tab-' + s).removeClass('hidden')
     }
 
