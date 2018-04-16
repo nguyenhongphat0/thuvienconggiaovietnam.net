@@ -223,24 +223,23 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
   <script src="js/functions.js"></script>
   <script>
-    function showTab(e) {
-      var s = e.dataset.tab
-      console.log(s);
-      $('.a-tab').removeClass('active')
-      // $(e).addClass('active')
-      $('.a-tab[data-tab=' + s + ']').addClass('active')
-      $('.tabs').children().addClass('hidden')
-      $('#tab-' + s).removeClass('hidden')
-    }
-
+    menu = $('.mobile-navbar .side-menu')
     $('#hamburger-icon').click((e) => {
-      var menu = $('.mobile-navbar .side-menu')
       if (menu.css('left') == '0px') {
-        menu.css('left', '-225px')        
+        menu.css('left', '-225px') 
       } else {
         menu.css('left', '0px')
       }
     })
+    function showTab(e) {
+      var s = e.dataset.tab
+      console.log(s);
+      $('.a-tab').removeClass('active')
+      $('.a-tab[data-tab=' + s + ']').addClass('active')
+      $('.tabs').children().addClass('hidden')
+      $('#tab-' + s).removeClass('hidden')
+      menu.css('left', '-225px')
+    }
   </script>
 </body>
 </html>
